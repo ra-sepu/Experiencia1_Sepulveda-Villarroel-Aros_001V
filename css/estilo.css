@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Monserrat&display=swap');
+
+body{
+    font-family: 'Monserrat', sans-serif;
+    overflow-x: hidden;
+    background-color: #f3f3f3;
+    margin: 0;
+}
+
+/* barra menu */
+#menu a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f3f3f;
+}
+
+#menu button{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* carrusel */
+.carousel-inner{
+    max-height: 40rem;
+}
+
+@media (max-width:768px) {
+    #texto {
+        width: 70% !important;
+    }
+}
+
+.video{
+    box-align: center;
+    text-align: center;
+    color: rgb(0, 4, 255);
+}
+
+/* footer */
+footer {
+    background-color: #222;
+    padding: 3rem;
+    color: #fff;
+}
+
+footer section{
+    float: right;
+}
+
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+
+}
+footer a:hoover {
+    color: cornflowerblue;
+}
+
+
+.sociales {
+    font-size:26px;
+    padding: 0 8px;
+    color: #f3f3f3;
+    align-items: center;
+    float: right;
+}
+
+
+/* galeria de imagenes */
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.galeria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.galeria a:hover{
+    border: 1px ;
+    transform: rotate(-3deg);
+}
+
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+.light-box img{
+    width: 45vw;
+    max-height: 70vh;
+}
+
+.light-box:target{
+    transform: scale(1);
+}
+
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.next{
+    display: block;
+    background: #222;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+.info{
+    display: block;
+    background: cadetblue;
+    color: black;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    line-height: 30px;
+}
+
+
+@media screen and (max-width:400px){
+    .galeria{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .close{
+        top: 20px;
+        right: 20px;
+    }
+
+}

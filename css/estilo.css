@@ -73,6 +73,14 @@ footer a:hoover {
 
 
 /* galeria de imagenes */
+
+.linea{
+    background: #550b51;
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+
 .galeria{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
